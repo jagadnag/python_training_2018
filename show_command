@@ -1,0 +1,3 @@
+show runn | in logging
+show ip access-lists TEST_ACL
+show ip ospf neighbor

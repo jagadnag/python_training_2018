@@ -1,0 +1,4 @@
+# Configuring Basic commands
+ip name-server 8.8.4.4
+no ip domain lookup
+ntp server 8.8.8.8

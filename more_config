@@ -1,0 +1,21 @@
+# Configuring Standard template
+ip name-server 8.8.4.4
+ip name-server 8.8.8.8
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+no ip domain lookup
+ip domain name lab.com
+ip ftp source-interface GigabitEthernet0
+no ip http server
+no ip http secure-server
+ip tftp source-interface GigabitEthernet0
+ntp server 8.8.8.8
+# Configuring ACL
+ip access-list extended TEST_ACL
+ permit ip 1.1.1.0 0.0.0.255 any
+ permit ip 2.2.2.0 0.0.0.255 any
+ permit ip 3.3.3.0 0.0.0.255 any
+# Configuring OSPF
+router ospf 100
+ network 0.0.0.0 255.255.255.255 area 0 
